@@ -13,7 +13,7 @@ import { Separator } from "@/components/ui/separator";
 import { Menu, MoreHorizontal, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const navItems = [
   { label: "Overview", iconSrc: "/home-icon.svg" },
@@ -91,15 +91,18 @@ export default function Navbar() {
     }
   };
 
-  const handleClickOutside = (e) => {
-    if (
-      sidebarOpen &&
-      !e.target.closest(".sidebar-content") &&
-      !e.target.closest(".menu-icon")
-    ) {
-      setSidebarOpen(false);
-    }
-  };
+  const handleClickOutside = useCallback(
+    (e) => {
+      if (
+        sidebarOpen &&
+        !e.target.closest(".sidebar-content") &&
+        !e.target.closest(".menu-icon")
+      ) {
+        setSidebarOpen(false);
+      }
+    },
+    [sidebarOpen]
+  );
 
   useEffect(() => {
     handleResize();
@@ -109,7 +112,7 @@ export default function Navbar() {
       window.removeEventListener("resize", handleResize);
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [sidebarOpen]);
+  }, [sidebarOpen, handleClickOutside]);
 
   return (
     <>
