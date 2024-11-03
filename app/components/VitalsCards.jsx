@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function VitalsCards() {
   return (
-    <div className="flex justify-between gap-4">
-      {/* Respiratory Rate Card */}
+    <div className="grid grid-cols-2 lg:grid-cols-3 justify-between gap-4">
+      {/* respiratory rate card */}
       <div className="w-full  bg-[#E0F3FA] rounded-[12px] p-4 shadow-none  flex flex-col justify-between">
         <div className="mb-4">
           <Image src="respiratoryrate.svg" alt="lungs" width={96} height={96} />
@@ -17,7 +17,7 @@ export default function VitalsCards() {
         </div>
       </div>
 
-      {/* Temperature Card */}
+      {/* temperature Card */}
       <div className="w-full  bg-[#FFE6E9] rounded-[12px] p-4 shadow-none  flex flex-col justify-between">
         <div className="mb-4">
           <Image
@@ -36,9 +36,9 @@ export default function VitalsCards() {
         </div>
       </div>
 
-      {/* Heart Rate Card */}
+      {/* heart rate card */}
 
-      <div className="w-full  bg-[#FFE6E9] rounded-[12px] p-4 shadow-none  flex flex-col justify-between">
+      <div className="w-full col-span-2 lg:col-span-1  bg-[#FFE6E9] rounded-[12px] p-4 shadow-none  flex flex-col justify-between">
         <div className="mb-4">
           <Image src="HeartBPM.svg" alt="HeartBPM" width={96} height={96} />
         </div>

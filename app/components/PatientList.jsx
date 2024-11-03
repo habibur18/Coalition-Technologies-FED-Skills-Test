@@ -118,7 +118,7 @@ export default function PatientList() {
   ];
 
   return (
-    <div className="w-full max-w-md mx-auto bg-[#FFFFFF] p-5">
+    <div className="sticky top-0 left-0 z-10 w-full max-w-lg mx-auto bg-white rounded-[16px] p-5 overflow-x-hidden overflow-y-hidden">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold">Patients</h1>
         <Button variant="ghost" size="icon">
@@ -126,55 +126,55 @@ export default function PatientList() {
         </Button>
       </div>
 
-      <div className="patient-list max-h-screen overflow-y-auto pr-2">
-        <div className="space-y-2">
-          {patients.map((patient) => (
-            <div
-              key={patient.id}
-              className={`flex items-center justify-between p-3 rounded-lg hover:bg-[#D8FCF7]/70 duration-300 ${
-                patient.name === "Jessica Taylor" ? "bg-[#D8FCF7] p-4" : ""
-              }`}
-            >
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/patient.png"
-                  alt={patient.name}
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                />
-                <div>
-                  <h3 className="font-medium ">{patient.name}</h3>
-                  <p className="text-sm text-secondary">
-                    {patient.gender}, {patient.age}
-                  </p>
-                </div>
+      <div className="space-y-2 max-h-[calc(100vh-250px)] overflow-y-auto">
+        {patients.map((patient) => (
+          <div
+            key={patient.id}
+            className={`flex items-center justify-between p-3 rounded-lg hover:bg-[#D8FCF7]/70 duration-300 ${
+              patient.name === "Jessica Taylor" ? "bg-[#D8FCF7] p-4" : ""
+            }`}
+          >
+            <div className="flex items-center gap-3">
+              <Image
+                src="/patient.png"
+                alt={patient.name}
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <div>
+                <h3 className="font-medium ">{patient.name}</h3>
+                <p className="text-sm text-secondary">
+                  {patient.gender}, {patient.age}
+                </p>
               </div>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon">
-                    <MoreVertical className="h-5 w-5 transform rotate-90" />
-                    <span className="sr-only">Open menu</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent
-                  align="end"
-                  className="bg-gray-100 rounded-xl shadow-lg "
-                >
-                  <DropdownMenuItem className="hover:!bg-white p-2">
-                    View profile
-                  </DropdownMenuItem>
-                  <DropdownMenuItem className="hover:!bg-white p-2 !rounded-xl">
-                    Edit details
-                  </DropdownMenuItem>
-                  <DropdownMenuItem className="text-red-500 hover:!bg-white hover:!text-red-700 font-bold rounded-xl p-2">
-                    Remove patient
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
             </div>
-          ))}
-        </div>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <MoreVertical className="h-5 w-5 transform rotate-90" />
+                  <span className="sr-only">Open menu</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                align="end"
+                side="left"
+                className="bg-gray-100 rounded-xl shadow-lg max-w-[150px] overflow-hidden"
+              >
+                <DropdownMenuItem className="hover:!bg-white p-2">
+                  View profile
+                </DropdownMenuItem>
+                <DropdownMenuItem className="hover:!bg-white p-2 !rounded-xl">
+                  Edit details
+                </DropdownMenuItem>
+                <DropdownMenuItem className="text-red-500 hover:!bg-white hover:!text-red-700 font-bold rounded-xl p-2">
+                  Remove patient
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -117,7 +117,7 @@ export default function Navbar() {
   return (
     <>
       <div className="w-full flex items-center justify-between p-4 bg-white shadow-md md:rounded-[70px]">
-        {/* Logo */}
+        {/* logo */}
         <div
           className={`${
             visibleItems < 3 && "flex-grow"
@@ -135,7 +135,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Nav Items  */}
+        {/* nav Items  */}
         <div className="hidden md:flex gap-6">
           {navItems.slice(0, visibleItems).map((item, index) => (
             <div
@@ -157,7 +157,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* User Profile  */}
+        {/* user profile  */}
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-4">
             <Image
@@ -209,7 +209,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* mobile Menu Button */}
         {visibleItems !== navItems.length && (
           <div className={`flex menu-icon`}>
             <Button variant="ghost" onClick={toggleSidebar}>
@@ -219,7 +219,7 @@ export default function Navbar() {
         )}
       </div>
 
-      {/* Sidebar for mobile view */}
+      {/* sidebar for mobile view */}
       <Sidebar isOpen={sidebarOpen} onClose={toggleSidebar} />
     </>
   );

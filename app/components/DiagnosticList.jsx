@@ -53,42 +53,42 @@ const diagnoses = [
 
 export default function DiagnosticList() {
   return (
-    <div className="bg-white p-4 sm:p-6 font-sans h-[349px] overflow-hidden">
-      <h1 className="text-xl sm:text-[22px] font-semibold text-[#111827] mb-4 sm:mb-6">
+    <div className="bg-white p-4 sm:p-6 rounded-[16px]">
+      <h1 className="text-[1.50rem] font-extrabold  mb-4 sm:mb-6">
         Diagnostic List
       </h1>
       <div className="relative overflow-x-auto">
         <div className="min-w-[177px]">
-          <table className="w-full text-left bg-[#F6F7F8] rounded-[24px]">
+          <table className="w-full text-left bg-[#F6F7F8] rounded-[24px] text-sm font-bold">
             <thead className="">
               <tr>
-                <th className="py-2 sm:py-3.5 pl-2 sm:pl-4 pr-1 sm:pr-3  text-xs sm:text-sm font-medium text-[#111827] w-[30%]">
+                <th className="py-2 sm:py-3.5 pl-2 sm:pl-4 pr-1 sm:pr-3 w-[30%]">
                   <div className="break-words">Problem/Diagnosis</div>
                 </th>
-                <th className="px-1 sm:px-3 py-2 sm:py-3.5  text-xs sm:text-sm font-medium text-[#111827] w-[50%]">
+                <th className="px-1 sm:px-3 py-2 sm:py-3.5 w-[50%]">
                   <div className="break-words">Description</div>
                 </th>
-                <th className="py-2 sm:py-3.5 pl-1 sm:pl-3 pr-2 sm:pr-4  text-xs sm:text-sm font-medium text-[#111827] w-[20%]">
+                <th className="py-2 sm:py-3.5 pl-1 sm:pl-3 pr-2 sm:pr-4 w-[20%]">
                   <div className="break-words">Status</div>
                 </th>
               </tr>
             </thead>
           </table>
-          <div className="max-h-[340px] overflow-y-auto">
-            <table className="w-full">
+          <div className="max-h-[240px] overflow-y-auto overflow-x-hidden">
+            <table className="w-full text-sm">
               <tbody>
                 {diagnoses.map((diagnosis, index) => (
                   <tr
                     key={index}
                     className="border-b border-[#E5E7EB] last:border-b-0 "
                   >
-                    <td className="py-2 sm:py-4 pl-2 sm:pl-4 pr-1 sm:pr-3 text-xs sm:text-sm font-medium text-[#111827] w-[30%]">
+                    <td className="py-2 sm:py-4 pl-2 sm:pl-4 pr-1 sm:pr-3  font-medium  w-[30%]">
                       <div className="break-words">{diagnosis.problem}</div>
                     </td>
-                    <td className="px-1 sm:px-3 py-2 sm:py-4 text-xs sm:text-sm text-[#6B7280] w-[50%]">
+                    <td className="px-1 sm:px-3 py-2 sm:py-4  w-[50%]">
                       <div className="break-words">{diagnosis.description}</div>
                     </td>
-                    <td className="py-2 sm:py-4 pl-1 sm:pl-3 pr-2 sm:pr-4 text-xs sm:text-sm text-[#111827] w-[20%]">
+                    <td className="py-2 sm:py-4 pl-1 sm:pl-3 pr-2 sm:pr-4   w-[20%]">
                       <div className="break-words">{diagnosis.status}</div>
                     </td>
                   </tr>

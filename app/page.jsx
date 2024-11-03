@@ -7,26 +7,27 @@ import PatientProfile from "./components/PatientProfile";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Navbar />
-      {/* total 3 column layout */}
-      {/* <main className="max-h-screen p:calc(100vh-64px)"> */}
-      <main className="">
-        <div className="grid grid-cols-12 gap-4">
-          <div className="col-span-3">
+      <main className="mt-8 p-4">
+        <div className="grid gap-8 w-full grid-cols-1  md:grid-cols-6 lg:grid-cols-12">
+          {/* patient List */}
+          <div className="order-1 md:col-span-3 lg:order-1 lg:col-span-3">
             <PatientList />
           </div>
-          <div className="col-span-5">
-            <div>
-              <DiagnosisHistory />
-              <DiagnosticList />
-            </div>
+
+          {/* Diagnosis history */}
+          <div className="order-3 md:col-span-4 lg:order-2 lg:col-span-6">
+            <DiagnosisHistory />
+            <div className="mb-8" />
+            <DiagnosticList />
           </div>
-          <div className="col-span-3">
-            <div>
-              <PatientProfile />
-              <LabResults />
-            </div>
+
+          {/* profile Sectionp */}
+          <div className="order-2 md:col-span-3 lg:order-3 lg:col-span-3">
+            <PatientProfile />
+            <div className="mb-8" />
+            <LabResults />
           </div>
         </div>
       </main>

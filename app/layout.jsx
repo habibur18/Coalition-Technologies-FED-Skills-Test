@@ -7,7 +7,6 @@ const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
 });
-// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: "Create Next App",
@@ -17,12 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        // use Manrope as the default font
-        className={` ${manrope.className}  antialiased`}
-      >
-        {children}
-      </body>
+      <body className={` ${manrope.className}  antialiased`}>{children}</body>
     </html>
   );
 }

@@ -113,10 +113,10 @@ const BloodPressureChart = () => {
   };
 
   return (
-    <div className="flex  gap-2 xl:gap-4 flex-col xl:flex-row bg-[#F4F0FE] p-3 rounded-xl  ">
-      <div className="flex flex-col flex-grow w-full ">
+    <div className=" flex gap-2 xl:gap-4 flex-col xl:flex-row bg-[#F4F0FE] p-3 rounded-xl  ">
+      <div className="flex flex-col flex-grow  ">
         <div className="flex justify-between items-center mb-4 text-[#666]">
-          <h3 className=" text-lg font-semibold">Blood Pressure</h3>
+          <h3 className=" text-lg font-extrabold">Blood Pressure</h3>
           {/* filter dropdown */}
           <Select defaultValue="sixMonths">
             <SelectTrigger className="w-[180px] border-0 focus:outline-none focus:ring-0 shadow-none ">
@@ -142,7 +142,7 @@ const BloodPressureChart = () => {
       </div>
 
       {/* Right Section with Legend */}
-      <div className=" w-full  p-4 rounded-lg xl:w-2/4  ">
+      <div className=" w-full  p-4 rounded-lg xl:w-1/4  ">
         <div>
           <div className="flex items-center mb-2">
             <span className="inline-block w-3 h-3 bg-[#E66FD2] rounded-full mr-2"></span>
