@@ -10,8 +10,8 @@ export default function LabResults() {
   ];
 
   return (
-    <div className="">
-      <div className="w-64 p-4 bg-white rounded-lg shadow-md">
+    <div className="w-full">
+      <div className="p-4 bg-white rounded-lg shadow-md">
         <h2 className="text-[1.50rem] font-extrabold text-gray-900 mb-4">
           Lab Results
         </h2>

@@ -4,7 +4,7 @@ export default function VitalsCards() {
   return (
     <div className="flex justify-between gap-4">
       {/* Respiratory Rate Card */}
-      <div className="w-full lg:max-w-[228px] bg-[#E0F3FA] rounded-[12px] p-4 shadow-none  flex flex-col justify-between">
+      <div className="w-full  bg-[#E0F3FA] rounded-[12px] p-4 shadow-none  flex flex-col justify-between">
         <div className="mb-4">
           <Image src="respiratoryrate.svg" alt="lungs" width={96} height={96} />
         </div>
@@ -18,7 +18,7 @@ export default function VitalsCards() {
       </div>
 
       {/* Temperature Card */}
-      <div className="w-full lg:max-w-[228px] bg-[#FFE6E9] rounded-[12px] p-4 shadow-none  flex flex-col justify-between">
+      <div className="w-full  bg-[#FFE6E9] rounded-[12px] p-4 shadow-none  flex flex-col justify-between">
         <div className="mb-4">
           <Image
             src="temperature.svg"
@@ -38,7 +38,7 @@ export default function VitalsCards() {
 
       {/* Heart Rate Card */}
 
-      <div className="w-full lg:max-w-[228px] bg-[#FFE6E9] rounded-[12px] p-4 shadow-none  flex flex-col justify-between">
+      <div className="w-full  bg-[#FFE6E9] rounded-[12px] p-4 shadow-none  flex flex-col justify-between">
         <div className="mb-4">
           <Image src="HeartBPM.svg" alt="HeartBPM" width={96} height={96} />
         </div>

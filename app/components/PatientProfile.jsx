@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function PatientProfile() {
   return (
-    <Card className="w-full max-w-[367px] mx-auto bg-white p-8 border-none shadow-none">
+    <Card className="w-full  mx-auto bg-white p-8 border-none shadow-none">
       <div className="flex flex-col items-center">
         {/* Profile Image */}
         <div className="rounded-full overflow-hidden">

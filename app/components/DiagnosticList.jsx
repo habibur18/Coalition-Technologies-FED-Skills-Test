@@ -51,14 +51,14 @@ const diagnoses = [
   },
 ];
 
-export default function DiagnosticListUpdate() {
+export default function DiagnosticList() {
   return (
-    <div className="bg-white p-4 sm:p-6 font-sans">
+    <div className="bg-white p-4 sm:p-6 font-sans h-[349px] overflow-hidden">
       <h1 className="text-xl sm:text-[22px] font-semibold text-[#111827] mb-4 sm:mb-6">
         Diagnostic List
       </h1>
       <div className="relative overflow-x-auto">
-        <div className="min-w-[375px]">
+        <div className="min-w-[177px]">
           <table className="w-full text-left bg-[#F6F7F8] rounded-[24px]">
             <thead className="">
               <tr>

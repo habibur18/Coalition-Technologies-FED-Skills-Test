@@ -69,7 +69,49 @@ export default function PatientList() {
     {
       id: 9,
       name: "Kevin Anderson",
+      gender: "Female",
+      age: 20,
+      image: "/placeholder.svg",
+    },
+    {
+      id: 10,
+      name: "Kevin Anderson",
       gender: "Male",
+      age: 21,
+      image: "/placeholder.svg",
+    },
+    {
+      id: 11,
+      name: "Kevin Anderson",
+      gender: "Male",
+      age: 12,
+      image: "/placeholder.svg",
+    },
+    {
+      id: 12,
+      name: "Kevin Anderson",
+      gender: "Male",
+      age: 13,
+      image: "/placeholder.svg",
+    },
+    {
+      id: 14,
+      name: "Kevin Anderson",
+      gender: "Female",
+      age: 15,
+      image: "/placeholder.svg",
+    },
+    {
+      id: 16,
+      name: "Kevin Anderson",
+      gender: "Female",
+      age: 17,
+      image: "/placeholder.svg",
+    },
+    {
+      id: 18,
+      name: "Kevin Anderson",
+      gender: "Female",
       age: 30,
       image: "/placeholder.svg",
     },
@@ -84,7 +126,7 @@ export default function PatientList() {
         </Button>
       </div>
 
-      <div className="patient-list min-h-screen overflow-y-auto pr-2">
+      <div className="patient-list max-h-screen overflow-y-auto pr-2">
         <div className="space-y-2">
           {patients.map((patient) => (
             <div
