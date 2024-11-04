@@ -28,7 +28,7 @@ function Sidebar({ isOpen, onClose }) {
     <>
       {/* overlay */}
       <div
-        className={`fixed inset-0 bg-green-900 bg-opacity-50 transition-opacity duration-300 ${
+        className={`fixed inset-0 z-20 bg-green-900 bg-opacity-50 transition-opacity duration-300 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={onClose}
@@ -178,7 +178,7 @@ export default function Navbar() {
             variant="horizontal"
             className={` ${
               visibleItems !== navItems.length && "hidden"
-            } h-10 w-px bg-black`}
+            } h-10 w-px bg-[#EDEDED]`}
           />
           <div className="flex items-center">
             <Image

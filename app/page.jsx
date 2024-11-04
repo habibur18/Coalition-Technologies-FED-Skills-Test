@@ -7,9 +7,9 @@ import PatientProfile from "./components/PatientProfile";
 
 export default function Home() {
   return (
-    <div>
+    <div className=" p-4">
       <Navbar />
-      <main className="mt-8 p-4">
+      <main className="mt-8">
         <div className="grid gap-8 w-full grid-cols-1  md:grid-cols-6 lg:grid-cols-12">
           {/* patient List */}
           <div className="order-1 md:col-span-3 lg:order-1 lg:col-span-3">
@@ -17,8 +17,10 @@ export default function Home() {
           </div>
 
           {/* Diagnosis history */}
-          <div className="order-3 md:col-span-4 lg:order-2 lg:col-span-6">
-            <DiagnosisHistory />
+          <div className="order-3 md:col-span-6 lg:order-2 lg:col-span-6">
+            <div className="w-3/4 lg:w-full">
+              <DiagnosisHistory />
+            </div>
             <div className="mb-8" />
             <DiagnosticList />
           </div>
