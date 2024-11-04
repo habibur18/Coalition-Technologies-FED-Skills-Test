@@ -1,53 +1,21 @@
-const diagnoses = [
+const diagnostic_list = [
   {
-    problem: "Hypertension",
-    description: "Chronic high blood pressure",
-    status: "Under Observation",
+    name: "Type 2 Diabetes",
+    description:
+      "A chronic condition that affects the way the body processes blood sugar (glucose).",
+    status: "Actively being treated",
   },
   {
-    problem: "Type 2 Diabetes",
-    description: "Insulin resistance and elevated blood sugar",
-    status: "Cured",
+    name: "Type 2 Diabetes",
+    description:
+      "A chronic condition that affects the way the body processes blood sugar (glucose).",
+    status: "Untreated",
   },
   {
-    problem: "Asthma",
-    description: "Recurrent episodes of bronchial constriction",
-    status: "Inactive",
-  },
-  {
-    problem: "Osteoarthritis",
-    description: "Degenerative joint disease",
-    status: "Under treatment",
-  },
-  {
-    problem: "Migraine",
-    description: "Recurrent severe headaches",
-    status: "Active",
-  },
-  {
-    problem: "Allergic Rhinitis",
-    description: "Inflammation of the nasal passages",
-    status: "Seasonal",
-  },
-  {
-    problem: "Allergic Rhinitis",
-    description: "Inflammation of the nasal passages",
-    status: "Seasonal",
-  },
-  {
-    problem: "Allergic Rhinitis",
-    description: "Inflammation of the nasal passages",
-    status: "Seasonal",
-  },
-  {
-    problem: "Allergic Rhinitis",
-    description: "Inflammation of the nasal passages",
-    status: "Seasonal",
-  },
-  {
-    problem: "Allergic Rhinitis",
-    description: "Inflammation of the nasal passages",
-    status: "Seasonal",
+    name: "Hypertension",
+    description:
+      "A condition in which the force of the blood against the artery walls is too high.",
+    status: "Under observation",
   },
 ];
 
@@ -77,13 +45,13 @@ export default function DiagnosticList() {
           <div className="max-h-[240px] overflow-y-auto overflow-x-hidden">
             <table className="w-full text-sm">
               <tbody>
-                {diagnoses.map((diagnosis, index) => (
+                {diagnostic_list.map((diagnosis, index) => (
                   <tr
                     key={index}
                     className="border-b border-[#E5E7EB] last:border-b-0 "
                   >
                     <td className="py-2 sm:py-4 pl-2 sm:pl-4 pr-1 sm:pr-3  font-medium  w-[30%]">
-                      <div className="break-words">{diagnosis.problem}</div>
+                      <div className="break-words">{diagnosis.name}</div>
                     </td>
                     <td className="px-1 sm:px-3 py-2 sm:py-4  w-[50%]">
                       <div className="break-words">{diagnosis.description}</div>

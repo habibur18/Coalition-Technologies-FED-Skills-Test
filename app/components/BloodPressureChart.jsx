@@ -31,20 +31,29 @@ ChartJS.register(
   Legend
 );
 
-const BloodPressureChart = () => {
-  const data = {
-    labels: [
-      "Oct, 2023",
-      "Nov, 2023",
-      "Dec, 2023",
-      "Jan, 2024",
-      "Feb, 2024",
-      "Mar, 2024",
-    ],
+const BloodPressureChart = ({ data, setTimeRange }) => {
+  const labels = data.map((entry) => `${entry.month}, ${entry.year}`);
+  const systolicData = data.map((entry) => entry.blood_pressure.systolic.value);
+  const diastolicData = data.map(
+    (entry) => entry.blood_pressure.diastolic.value
+  );
+
+  const systolicAverage = Math.round(
+    data.reduce((sum, entry) => sum + entry.blood_pressure.systolic.value, 0) /
+      data.length
+  );
+
+  const diastolicAverage = Math.round(
+    data.reduce((sum, entry) => sum + entry.blood_pressure.diastolic.value, 0) /
+      data.length
+  );
+
+  const chartData = {
+    labels,
     datasets: [
       {
         label: "Systolic",
-        data: [120, 118, 160, 112, 145, 157],
+        data: systolicData,
         borderColor: "#E66FD2",
         backgroundColor: "#DDA0DD",
         pointBorderColor: "#E66FD2",
@@ -55,7 +64,7 @@ const BloodPressureChart = () => {
       },
       {
         label: "Diastolic",
-        data: [110, 64, 110, 85, 68, 78],
+        data: diastolicData,
         borderColor: "#8C6FE6",
         backgroundColor: "#8C6FE6",
         pointBorderColor: "#8C6FE6",
@@ -112,13 +121,19 @@ const BloodPressureChart = () => {
     },
   };
 
+  const handleTimeRangeChange = (value) => {
+    setTimeRange(value);
+  };
   return (
     <div className=" flex gap-2 xl:gap-4 flex-col xl:flex-row bg-[#F4F0FE] p-3 rounded-xl  ">
       <div className="flex flex-col flex-grow  ">
         <div className="flex justify-between items-center mb-4 text-[#666]">
           <h3 className=" text-lg font-extrabold">Blood Pressure</h3>
           {/* filter dropdown */}
-          <Select defaultValue="sixMonths">
+          <Select
+            defaultValue="sixMonths"
+            onValueChange={handleTimeRangeChange}
+          >
             <SelectTrigger className="w-[180px] border-0 focus:outline-none focus:ring-0 shadow-none ">
               <SelectValue placeholder="Select A Month" />
             </SelectTrigger>
@@ -138,7 +153,7 @@ const BloodPressureChart = () => {
           </Select>
         </div>
 
-        <Line data={data} options={options} />
+        <Line data={chartData} options={options} />
       </div>
 
       {/* Right Section with Legend */}
@@ -149,7 +164,8 @@ const BloodPressureChart = () => {
             <span className="font-bold text-sm ">Systolic</span>
           </div>
           <div className="space-y-2">
-            <p className="font-bold text-xl text-left">160</p>
+            {/* <p className="font-bold text-xl text-left">160</p> */}
+            <p className="font-bold text-xl text-left">{systolicAverage}</p>
             <p className="text-sm flex items-center gap-2">
               <Image src="/ArrowUp.svg" alt="arrow-up" width={10} height={5} />
               <span>Higher than Average</span>
@@ -164,7 +180,8 @@ const BloodPressureChart = () => {
             <span className="font-bold text-sm ">Diastolic</span>
           </div>
           <div>
-            <p className="font-bold text-xl text-left">78</p>
+            {/* <p className="font-bold text-xl text-left">78</p> */}
+            <p className="font-bold text-xl text-left">{diastolicAverage}</p>
             <p className="text-sm flex items-center gap-2">
               <Image
                 src="/ArrowDown.svg"

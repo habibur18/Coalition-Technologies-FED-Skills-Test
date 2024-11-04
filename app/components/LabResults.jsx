@@ -1,12 +1,13 @@
 import Image from "next/image";
 
 export default function LabResults() {
-  const results = [
-    { name: "Blood Tests" },
-    { name: "CT Scans" },
-    { name: "Radiology Reports" },
-    { name: "X-Rays" },
-    { name: "Urine Test" },
+  const lab_results = [
+    "Ultrasound",
+    "Urinalysis",
+    "Lipid Panel",
+    "Radiology Report",
+    "Bone Density Scan",
+    "Prostate-Specific Antigen (PSA)",
   ];
 
   return (
@@ -16,14 +17,14 @@ export default function LabResults() {
           Lab Results
         </h2>
         <ul className="space-y-2 max-h-[200px] overflow-y-auto">
-          {results.map((result, index) => (
+          {lab_results.map((result, index) => (
             <li
               key={index}
               className={`flex items-center justify-between cursor-pointer p-2 ${
                 index === 1 ? "bg-[#F6F7F8] rounded-md" : ""
               }`}
             >
-              <span className="">{result.name}</span>
+              <span className="">{result}</span>
               <Image
                 src="/downloadicon.svg"
                 alt="downloadicon"

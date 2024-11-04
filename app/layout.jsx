@@ -1,3 +1,4 @@
+import PatientWraper from "@/wraper/PatientWraper";
 import "./globals.css";
 
 import { Manrope } from "next/font/google";
@@ -16,7 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={` ${manrope.className}  antialiased`}>{children}</body>
+      <body className={` ${manrope.className}  antialiased`}>
+        <PatientWraper>{children}</PatientWraper>
+      </body>
     </html>
   );
 }

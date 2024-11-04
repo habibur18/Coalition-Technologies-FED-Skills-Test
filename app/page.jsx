@@ -5,7 +5,23 @@ import Navbar from "./components/Navbar";
 import PatientList from "./components/PatientList";
 import PatientProfile from "./components/PatientProfile";
 
-export default function Home() {
+export default async function Home() {
+  let username = "coalition";
+  let password = "skills-test";
+  let auth = btoa(`${username}:${password}`);
+  console.log(auth);
+  const response = await fetch(
+    "https://fedskillstest.coalitiontechnologies.workers.dev",
+    {
+      method: "GET",
+      headers: {
+        Authorization: `Basic ${auth}`,
+      },
+    }
+  ).then((response) => {
+    return response.json();
+  });
+  console.log(response);
   return (
     <div className=" p-4">
       <Navbar />
