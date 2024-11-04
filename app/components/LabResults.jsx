@@ -1,15 +1,14 @@
 import Image from "next/image";
 
-export default function LabResults() {
-  const lab_results = [
-    "Ultrasound",
-    "Urinalysis",
-    "Lipid Panel",
-    "Radiology Report",
-    "Bone Density Scan",
-    "Prostate-Specific Antigen (PSA)",
-  ];
-
+const lab_results = [
+  "Ultrasound",
+  "Urinalysis",
+  "Lipid Panel",
+  "Radiology Report",
+  "Bone Density Scan",
+  "Prostate-Specific Antigen (PSA)",
+];
+export default function LabResults({ lab_results }) {
   return (
     <div className="w-full bg-white rounded-[16px]">
       <div className="p-4 ">

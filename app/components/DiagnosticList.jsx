@@ -19,7 +19,7 @@ const diagnostic_list = [
   },
 ];
 
-export default function DiagnosticList() {
+export default function DiagnosticList({ diagnostic_list }) {
   return (
     <div className="bg-white p-4 sm:p-6 rounded-[16px]">
       <h1 className="text-[1.50rem] font-extrabold  mb-4 sm:mb-6">
