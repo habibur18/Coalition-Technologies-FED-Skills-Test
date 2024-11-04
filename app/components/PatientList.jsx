@@ -8,22 +8,69 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { MoreVertical, Search } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function PatientList({
   patients,
   selectedPatient,
   onPatientSelect,
+  searchQuery,
+  onSearch,
 }) {
+  const [isInputVisible, setInputVisible] = useState(false);
+  const inputRef = useRef(null);
   const handlePatientClick = (patient) => {
     onPatientSelect(patient.name);
+  };
+
+  const handleSearchClick = () => {
+    setInputVisible((prev) => !prev);
+  };
+
+  useEffect(() => {
+    if (isInputVisible && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isInputVisible]);
+
+  // only alphanumeric characters are allowed
+  const handleInputChange = (e) => {
+    const { value } = e.target;
+    if (/^[a-zA-Z0-9]*$/.test(value)) {
+      onSearch(e);
+    }
+  };
+
+  // prevent typing special characters like # and @ or the dot in input field
+  const handleKeyDown = (e) => {
+    if (/[^a-zA-Z0-9]/.test(e.key)) {
+      e.preventDefault();
+    }
   };
   return (
     <div className="sticky top-0 left-0 z-10 w-full max-w-lg mx-auto bg-white rounded-[16px] p-5 overflow-x-hidden overflow-y-hidden">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold">Patients</h1>
-        <Button variant="ghost" size="icon">
+        <Button
+          className={`${isInputVisible ? "hidden" : ""}`}
+          variant="ghost"
+          size="icon"
+          onClick={handleSearchClick}
+        >
           <Search className="h-5 w-5" />
         </Button>
+        {isInputVisible && (
+          <input
+            type="text"
+            value={searchQuery || ""}
+            ref={inputRef}
+            // onChange={onSearch}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+            placeholder="Search patients..."
+            className="ml-4 p-2 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+          />
+        )}
       </div>
 
       <div className="space-y-2 max-h-[calc(100vh-250px)] overflow-y-auto">
@@ -59,7 +106,6 @@ export default function PatientList({
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent
-                align="end"
                 side="left"
                 className="bg-gray-100 rounded-xl shadow-lg max-w-[150px] overflow-hidden"
               >

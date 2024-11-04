@@ -53,7 +53,7 @@ const DiagnosisHistory = ({ diagnosis_history }) => {
   const averages = calculateAverages(filteredData);
 
   return (
-    <div className=" bg-white p-6 rounded-[16px] w-full shadow-lg">
+    <div className=" bg-white p-6 rounded-[16px] shadow-lg w-full">
       {/* left section with chart */}
       <h2 className="text-2xl font-extrabold mb-10">Diagnosis History</h2>
       {/* chart section */}

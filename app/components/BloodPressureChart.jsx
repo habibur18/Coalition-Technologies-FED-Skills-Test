@@ -166,10 +166,27 @@ const BloodPressureChart = ({ data, setTimeRange }) => {
           <div className="space-y-2">
             {/* <p className="font-bold text-xl text-left">160</p> */}
             <p className="font-bold text-xl text-left">{systolicAverage}</p>
-            <p className="text-sm flex items-center gap-2">
-              <Image src="/ArrowUp.svg" alt="arrow-up" width={10} height={5} />
-              <span>Higher than Average</span>
-            </p>
+            {systolicAverage > 120 ? (
+              <p className="text-sm flex items-center gap-2">
+                <Image
+                  src="/ArrowUp.svg"
+                  alt="arrow-up"
+                  width={10}
+                  height={5}
+                />
+                <span>Higher than Average</span>
+              </p>
+            ) : (
+              <p className="text-sm flex items-center gap-2">
+                <Image
+                  src="/ArrowDown.svg"
+                  alt="arrow-down"
+                  width={10}
+                  height={5}
+                />
+                <span>Lower than Average</span>
+              </p>
+            )}
           </div>
         </div>
         {/* should be one seperator */}
@@ -182,16 +199,27 @@ const BloodPressureChart = ({ data, setTimeRange }) => {
           <div>
             {/* <p className="font-bold text-xl text-left">78</p> */}
             <p className="font-bold text-xl text-left">{diastolicAverage}</p>
-            <p className="text-sm flex items-center gap-2">
-              <Image
-                src="/ArrowDown.svg"
-                alt="arrow-down"
-                width={10}
-                height={5}
-              />
-
-              <span>Lower than Average</span>
-            </p>
+            {diastolicAverage > 80 ? (
+              <p className="text-sm flex items-center gap-2">
+                <Image
+                  src="/ArrowUp.svg"
+                  alt="arrow-up"
+                  width={10}
+                  height={5}
+                />
+                <span>Higher than Average</span>
+              </p>
+            ) : (
+              <p className="text-sm flex items-center gap-2">
+                <Image
+                  src="/ArrowDown.svg"
+                  alt="arrow-down"
+                  width={10}
+                  height={5}
+                />
+                <span>Lower than Average</span>
+              </p>
+            )}
           </div>
         </div>
       </div>
