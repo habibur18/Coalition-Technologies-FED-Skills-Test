@@ -3,17 +3,6 @@ import { Card } from "@/components/ui/card";
 
 import Image from "next/image";
 
-const patientInfo = {
-  name: "Emily Williams",
-  gender: "Female",
-  age: 18,
-  profile_picture: "https://fedskillstest.ct.digital/1.png",
-  date_of_birth: "2006-08-19",
-  phone_number: "(711) 984-6696",
-  emergency_contact: "(680) 653-9512",
-  insurance_type: "Premier Auto Corporation",
-};
-
 export default function PatientProfile({ patientInfo }) {
   return (
     <Card className="w-full  mx-auto bg-white p-8 border-none shadow-none">

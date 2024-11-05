@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tech Care Patient Management Dashboard
 
-## Getting Started
+This project is a patient management dashboard interface for **Tech Care**, developed using **Next.js 15** and modern libraries to create a seamless, responsive, and intuitive user experience for healthcare providers. This dashboard allows healthcare professionals to monitor, manage, and keep track of patient information and diagnostic history in real-time.
 
-First, run the development server:
+Explore the live preview of this project [here](https://coalition-technologies-fed-skills-test.vercel.app/).
+
+---
+
+## Table of Contents :scroll:
+
+- [Features](#features-star)
+- [Demo](#demo-application-screenshot)
+- [Installation](#installation-arrow_down)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Packages Used](#packages-used-package)
+
+---
+
+## Features :features-star:
+
+- **Patient List with Search and Filter**: Easily searchable patient list with debounce functionality for optimized searching. Click on a patient to view detailed information.
+- **Patient Overview**: Displays essential details about each patient, including contact information, emergency contacts, and insurance provider.
+- **Diagnosis History and Health Metrics**: Visual representations of diagnostic data (blood pressure trends over six months) along with metrics like respiratory rate, temperature, and heart rate.
+- **Diagnostic List**: Summary table showing diagnosed conditions, descriptions, and current status ( "Under Observation," "Cured", e.t.c).
+- **Lab Results**: Downloadable lab results segmented by category (Blood Tests, CT Scans, Radiology Reports, X-Rays).
+- **Responsive Design**: Designed to work on multiple devices for ease of use by healthcare professionals in different environments.
+
+---
+
+## Demo :demo-application-screenshot:
+
+![Screenshot of Tech Care Patient Dashboard](./public/screen.png)
+
+---
+
+## Installation :getting-started:
+
+### Requirements
+
+To run this project, make sure you have the latest versions of **Git** and **Node.js**:
+
+- [Download Git](https://git-scm.com/downloads)
+- [Download Node](https://nodejs.org/en/download/)
+
+Verify installation:
+
+```bash
+node --version
+git --version
+```
+
+---
+
+## Getting Started :dart:
+
+### 1. Fork and Clone the Repository
+
+Fork this repository by clicking the "Fork" button at the top right of the page. Then, clone it to your local machine:
+
+```bash
+git clone https://github.com/<YOUR-GITHUB-USERNAME>/https://github.com/habibur18/Coalition-Technologies-FED-Skills-Test
+cd assessment-for-coalition-tech
+```
+
+### 2. Install Dependencies
+
+From the root directory, install the required packages:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Start the Development Server
+
+Run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage :usage
 
-## Learn More
+Now You can view .env.example file just rename it .evn extention only. If you are in localhost then `NODE_ENV="development"` will be `development` if you want to host than chnage it to `production`.
 
-To learn more about Next.js, take a look at the following resources:
+```plaintext
+NODE_ENV="development"
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Patient Search with Debounce
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The patient list includes a **search bar with debounce functionality**, optimizing the search experience and reducing unnecessary API calls. This allows the search to only trigger once the user has finished typing, making it smoother and more responsive.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Packages Used :package: #packages-used-package
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Package Name      | Description                                                      |
+| ----------------- | ---------------------------------------------------------------- |
+| `next`            | Framework for server-side rendering and static web applications. |
+| `shadcn/ui`       | UI library for customizable components.                          |
+| `lucide-react`    | Icon toolkit for beautiful and flexible icons.                   |
+| `react-chartjs-2` | React wrapper for Chart.js, used for visualizing patient data.   |
+| `chart.js`        | Data visualization library for charts and graphs.                |
+| `react-hook-form` | Library for managing forms and handling form validation.         |
+| `tailwindcss`     | Utility-first CSS framework for styling and responsive design.   |
+| `zod`             | TypeScript-first schema validation for data validation.          |
+
+---
+
+With these features and modern UI/UX principles, this dashboard provides healthcare professionals with a centralized, efficient, and data-driven interface to manage patient information and health metrics, enhancing productivity and care quality.

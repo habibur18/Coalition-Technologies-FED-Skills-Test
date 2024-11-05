@@ -1,24 +1,3 @@
-const diagnostic_list = [
-  {
-    name: "Type 2 Diabetes",
-    description:
-      "A chronic condition that affects the way the body processes blood sugar (glucose).",
-    status: "Actively being treated",
-  },
-  {
-    name: "Type 2 Diabetes",
-    description:
-      "A chronic condition that affects the way the body processes blood sugar (glucose).",
-    status: "Untreated",
-  },
-  {
-    name: "Hypertension",
-    description:
-      "A condition in which the force of the blood against the artery walls is too high.",
-    status: "Under observation",
-  },
-];
-
 export default function DiagnosticList({ diagnostic_list }) {
   return (
     <div className="bg-white p-4 sm:p-6 rounded-[16px]">
