@@ -2,7 +2,7 @@
 
 This project is a patient management dashboard interface for **Tech Care**, developed using **Next.js 15** and modern libraries to create a seamless, responsive, and intuitive user experience for healthcare providers. This dashboard allows healthcare professionals to monitor, manage, and keep track of patient information and diagnostic history in real-time.
 
-Explore the live preview of this project [here](https://coalition-technologies-fed-skills-test.vercel.app/).
+# Explore the live preview of this project [here](https://coalition-technologies-fed-skills-test.vercel.app/).
 
 ---
 
