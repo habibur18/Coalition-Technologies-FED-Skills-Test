@@ -95,7 +95,7 @@ Now You can view .env.example file just rename it .evn extention only. If you ar
 NODE_ENV="development"
 ```
 
-### Patient Search with Debounce
+## Patient Search with Debounce
 
 The patient list includes a **search bar with debounce functionality**, optimizing the search experience and reducing unnecessary API calls. This allows the search to only trigger once the user has finished typing, making it smoother and more responsive.
 
@@ -116,4 +116,4 @@ The patient list includes a **search bar with debounce functionality**, optimizi
 
 ---
 
-With these features and modern UI/UX principles, this dashboard provides healthcare professionals with a centralized, efficient, and data-driven interface to manage patient information and health metrics, enhancing productivity and care quality.
+##### Note: This application follow best practices and `Do Repeat Yourself`(DRY) principle.
