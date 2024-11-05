@@ -31,6 +31,9 @@ This project is a patient management dashboard interface for **Tech Care**, deve
 ## Demo :demo-application-screenshot:
 
 ![Screenshot of Tech Care Patient Dashboard](./public/screen.png)
+
+## Github Tracking :Github comment history
+
 ![Github comments history](./public/comments.png)
 
 ---
@@ -117,4 +120,14 @@ The patient list includes a **search bar with debounce functionality**, optimizi
 
 ---
 
-##### Note: This application follow best practices and `Do Repeat Yourself`(DRY) principle.
+#### Note:
+
+This application follow best practices and `Do Repeat Yourself`(DRY) principle.
+
+#### P.S. For my recruiter:
+
+`I'm eager to learn and grow as a developer. While I haven't formally studied data structures and algorithms or platforms like LeetCode, but I’m dedicated to writing clean, efficient code. I follow the DRY principle and often find optimized solutions, for instance, using reduce instead of traditional loops or finding ways around standard sorting methods to improve performance.`
+
+`AI tools are part of my workflow, and I use them thoughtfully to enhance my work. If I understand a solution and it’s efficient, I’ll use it. If not, I move forward with approaches I fully grasp. I always prioritize readability, performance, and overall code quality. I know how to identify limitations and can adapt as needed to keep applications running smoothly.`
+
+`I’m excited for this opportunity, and you have my commitment to give my best in all aspects. Thank you very much for your consideration.`
