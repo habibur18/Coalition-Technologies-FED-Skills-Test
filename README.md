@@ -10,7 +10,7 @@ Explore the live preview of this project [here](https://coalition-technologies-f
 
 - [Features](#features-star)
 - [Demo](#demo-application-screenshot)
-- [Installation](#installation-arrow_down)
+- [Installation](#installation)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Packages Used](#packages-used-package)
@@ -43,7 +43,7 @@ To run this project, make sure you have the latest versions of **Git** and **Nod
 - [Download Git](https://git-scm.com/downloads)
 - [Download Node](https://nodejs.org/en/download/)
 
-Verify installation:
+#### Verify installation: installation
 
 ```bash
 node --version

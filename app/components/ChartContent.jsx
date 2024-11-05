@@ -29,30 +29,6 @@ const ChartContent = ({ labels, systolicData, diastolicData }) => {
     ],
   };
 
-  // const options = {
-  //   responsive: true,
-  //   plugins: {
-  //     legend: { display: false },
-  //     tooltip: {
-  //       callbacks: {
-  //         label: (context) => `${context.dataset.label}: ${context.raw}`,
-  //       },
-  //     },
-  //   },
-  //   scales: {
-  //     y: {
-  //       min: 60,
-  //       max: 180,
-  //       ticks: { stepSize: 20, color: "#4A4A4A" },
-  //       grid: { color: "#E0E0E0", drawBorder: false },
-  //     },
-  //     x: {
-  //       ticks: { color: "#4A4A4A", padding: 10 },
-  //       grid: { drawBorder: false, clip: false },
-  //     },
-  //   },
-  // };
-
   const options = {
     responsive: true,
     plugins: {
