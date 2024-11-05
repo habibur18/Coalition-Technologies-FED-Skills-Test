@@ -31,6 +31,7 @@ Explore the live preview of this project [here](https://coalition-technologies-f
 ## Demo :demo-application-screenshot:
 
 ![Screenshot of Tech Care Patient Dashboard](./public/screen.png)
+![Github comments history](./public/comments.png)
 
 ---
 
