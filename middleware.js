@@ -25,7 +25,7 @@ export default async function middleware(req) {
 
   // redirect to login if no session or if the session is expired
   if (!sessionCookie) {
-    console.warn("No session found, redirecting to login.");
+    // console.warn("No session found, redirecting to login.");
     return NextResponse.redirect(new URL("/login", req.url));
   }
 
@@ -37,11 +37,11 @@ export default async function middleware(req) {
       parsedSession.expiresAt > new Date().getTime();
 
     if (!isSessionValid) {
-      console.warn("Session expired, redirecting to login.");
+      // console.warn("Session expired, redirecting to login.");
       return NextResponse.redirect(new URL("/login", req.url));
     }
   } catch (error) {
-    console.error("Error parsing session:", error);
+    // console.error("Error parsing session:", error);
     return NextResponse.redirect(new URL("/login", req.url));
   }
 

@@ -6,7 +6,7 @@ Explore the live preview of this project [here](https://coalition-technologies-f
 
 ---
 
-## Table of Contents :scroll:
+<!-- ## Table of Contents :scroll:
 
 - [Features](#features-star)
 - [Demo](#demo-application-screenshot)
@@ -15,7 +15,7 @@ Explore the live preview of this project [here](https://coalition-technologies-f
 - [Usage](#usage)
 - [Packages Used](#packages-used-package)
 
----
+--- -->
 
 ## Features :features-star:
 

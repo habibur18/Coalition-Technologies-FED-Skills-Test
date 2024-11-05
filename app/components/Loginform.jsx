@@ -50,7 +50,6 @@ export default function LogInForm() {
     startTransition(async () => {
       try {
         const response = await authenticate(data);
-        console.log(response);
         if (response.success) {
           navigate.push("/");
         } else {

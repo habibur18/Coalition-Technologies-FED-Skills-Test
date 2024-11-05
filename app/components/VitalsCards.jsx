@@ -51,7 +51,6 @@ function VitalCard({
 }
 
 export default function VitalsCards({ averages }) {
-  console.log(averages);
   // configure vitals cards array
   const vitalsConfig = [
     {
