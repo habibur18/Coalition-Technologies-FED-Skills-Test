@@ -105,7 +105,7 @@ The patient list includes a **search bar with debounce functionality**, optimizi
 
 ---
 
-## Packages Used :package: #packages-used-package
+## Packages Used :packages
 
 | Package Name      | Description                                                      |
 | ----------------- | ---------------------------------------------------------------- |
