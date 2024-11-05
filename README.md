@@ -59,8 +59,8 @@ git --version
 Fork this repository by clicking the "Fork" button at the top right of the page. Then, clone it to your local machine:
 
 ```bash
-git clone https://github.com/<YOUR-GITHUB-USERNAME>/https://github.com/habibur18/Coalition-Technologies-FED-Skills-Test
-cd assessment-for-coalition-tech
+git clone https://gitfront.io/r/habibur19/9ePezHaeVFm7/Coalition-Technologies-FED-Skills-Test-gitfront.git
+cd Coalition-Technologies-FED-Skills-Test-gitfront
 ```
 
 ### 2. Install Dependencies
