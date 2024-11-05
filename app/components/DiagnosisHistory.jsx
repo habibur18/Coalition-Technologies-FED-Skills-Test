@@ -4,7 +4,6 @@ import BloodPressureChart from "./BloodPressureChart";
 import VitalsCards from "./VitalsCards";
 
 const DiagnosisHistory = ({ diagnosis_history }) => {
-  // const { patient, setPatient } = useContext(PatientContext);
   const [timeRange, setTimeRange] = useState("sixMonths");
 
   // sort the diagnosis history by month and year

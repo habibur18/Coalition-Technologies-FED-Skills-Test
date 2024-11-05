@@ -37,15 +37,20 @@ function VitalCard({
     >
       <div className="mb-4">
         <Image src={iconSrc} alt={altText} width={96} height={96} />
-        <h3 className="text-sm font-semibold">{label}</h3>
       </div>
-      <p className="text-2xl font-bold text-[#2C2A29]">
-        {Math.round(value) || "N/A"} {unit}
-      </p>
-      <p className="text-sm flex items-center gap-2 text-[#7D7B7B]">
-        {arrow && <Image src={arrow} alt="arrow" width={10} height={5} />}
-        <span>{status}</span>
-      </p>
+      <div className="flex flex-col flex-grow justify-between">
+        <div className="mb-2">
+          <h3 className="text-[16px] ">{label}</h3>
+          <p className="text-3xl font-bold text-[#2C2A29]">
+            {Math.round(value) || "N/A"} {unit}
+          </p>
+        </div>
+
+        <p className="text-sm flex items-center gap-2 text-[#7D7B7B]">
+          {arrow && <Image src={arrow} alt="arrow" width={10} height={5} />}
+          <span>{status}</span>
+        </p>
+      </div>
     </div>
   );
 }
